@@ -4,6 +4,7 @@ export class Comment{
     public Description : string;
     public Id : string;
     public Alias : string;
+    
 
 
 }
