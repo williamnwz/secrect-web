@@ -17,9 +17,12 @@ export class ActionsCommentContainerComponent implements OnInit {
   ngOnInit() {
   }
 
-  public newComment(){
+  public newComment() {
+
    let modalRef = this.modalService.open(NewCommentComponent);
-   modalRef.componentInstance.name = 'World';
+   let comment = new Comment();
+   modalRef.componentInstance.comment = comment;
+
   }
 
 }

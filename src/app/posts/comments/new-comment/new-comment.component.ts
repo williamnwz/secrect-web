@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Comment } from 'src/app/models/comment.model';
 
 @Component({
   selector: 'new-comment',
@@ -9,7 +10,7 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class NewCommentComponent implements OnInit {
 
   @Input() 
-  public name : string;
+  public comment : Comment;
   constructor(public activeModal: NgbActiveModal) {}
 
   ngOnInit() {
