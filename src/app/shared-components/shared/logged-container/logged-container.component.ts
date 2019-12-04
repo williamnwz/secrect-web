@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from 'src/app/models/post.model';
 
 @Component({
   selector: 'app-logged-container',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./logged-container.component.css']
 })
 export class LoggedContainerComponent implements OnInit {
+
+  public Posts : Array<Post> = [];
 
   constructor() { }
 
