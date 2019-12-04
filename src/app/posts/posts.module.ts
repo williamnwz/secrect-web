@@ -4,13 +4,15 @@ import { PostContainerComponent } from './post-container/post-container.componen
 import { ItemPostComponent } from './item-post/item-post.component';
 import { CommentsModule } from './comments/comments.module';
 import { NewPostComponent } from './new-post/new-post.component';
+import { NewPostPopupComponent } from './new-post-popup/new-post-popup.component';
 
 
 @NgModule({
   declarations: [
     PostContainerComponent,
     ItemPostComponent,
-    NewPostComponent
+    NewPostComponent,
+    NewPostPopupComponent
     ],
   imports: [
     CommonModule,
@@ -18,7 +20,11 @@ import { NewPostComponent } from './new-post/new-post.component';
   ],
   exports:[
     PostContainerComponent,
-    NewPostComponent
+    NewPostComponent,
+    NewPostPopupComponent
+    ],
+    entryComponents:[
+      NewPostPopupComponent
     ]
 })
 export class PostsModule { }
