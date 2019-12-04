@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Comment } from 'src/app/models/comment.model';
+import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NewCommentComponent } from '../new-comment/new-comment.component';
 
 @Component({
   selector: 'actions-comment-container',
@@ -10,9 +12,14 @@ export class ActionsCommentContainerComponent implements OnInit {
 
   @Input()
   public Comments : Array<Comment> = [];
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
+  }
+
+  public newComment(){
+   let modalRef = this.modalService.open(NewCommentComponent);
+   modalRef.componentInstance.name = 'World';
   }
 
 }

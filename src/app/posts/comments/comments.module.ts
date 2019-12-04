@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { CommentContainerComponent } from './comment-container/comment-container.component';
 import { ItemCommentComponent } from './item-comment/item-comment.component';
 import { ActionsCommentContainerComponent } from './actions-comment-container/actions-comment-container.component';
+import { NewCommentComponent } from './new-comment/new-comment.component';
+
 
 
 
@@ -10,7 +12,8 @@ import { ActionsCommentContainerComponent } from './actions-comment-container/ac
   declarations: [
     CommentContainerComponent,
     ItemCommentComponent,
-    ActionsCommentContainerComponent
+    ActionsCommentContainerComponent,
+    NewCommentComponent
   ],
   imports: [
     CommonModule
@@ -18,7 +21,11 @@ import { ActionsCommentContainerComponent } from './actions-comment-container/ac
   exports:[
     CommentContainerComponent,
     ItemCommentComponent,
-    ActionsCommentContainerComponent
-  ]
+    ActionsCommentContainerComponent,
+    NewCommentComponent
+  ],
+  entryComponents: [
+    NewCommentComponent,
+  ],
 })
 export class CommentsModule { }
