@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-6 offset-md-3">
+    <div class="col-md-6 offset-md-3 animated bounceInDown">
         <div class="my-3 p-3 bg-white rounded box-shadow">
             <div class="container">
                 <div class="row">
@@ -21,7 +21,11 @@
                     </div>
                 </div>
 
-                <comment-container [CanShowComments]="CanShowComments" [Comments]="Post.Comments"></comment-container>
+                
+                <comment-container 
+                    [CanShowComments]="CanShowComments" 
+                    [Comments]="Post.Comments">
+                </comment-container>
 
                 <actions-comment-container (AllowShowCommentEvent)="ReciveAllowShowComments($event)" [Comments]="Post.Comments"></actions-comment-container>
 

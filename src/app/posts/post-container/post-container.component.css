@@ -1,3 +1,7 @@
 .post-description{
     text-align: center;
 }
+
+.behind{
+    z-index: 100;
+}
