@@ -21,9 +21,9 @@
                     </div>
                 </div>
 
-                <comment-container [Comments]="Post.Comments"></comment-container>
+                <comment-container [CanShowComments]="CanShowComments" [Comments]="Post.Comments"></comment-container>
 
-                <actions-comment-container [Comments]="Post.Comments"></actions-comment-container>
+                <actions-comment-container (AllowShowCommentEvent)="ReciveAllowShowComments($event)" [Comments]="Post.Comments"></actions-comment-container>
 
             </div>
         </div>

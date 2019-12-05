@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Comment } from 'src/app/models/comment.model';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NewCommentComponent } from '../new-comment/new-comment.component';
@@ -12,7 +12,13 @@ export class ActionsCommentContainerComponent implements OnInit {
 
   @Input()
   public Comments : Array<Comment> = [];
-  constructor(private modalService: NgbModal) { }
+
+  @Output()
+  public AllowShowCommentEvent = new EventEmitter<boolean>();
+  private AllowShowComment : boolean;
+
+  constructor(private modalService: NgbModal) { 
+  }
 
   ngOnInit() {
   }
@@ -24,5 +30,13 @@ export class ActionsCommentContainerComponent implements OnInit {
    modalRef.componentInstance.comment = comment;
 
   }
+
+  public ShowComments() {
+    this.AllowShowComment = !this.AllowShowComment;
+    this.AllowShowCommentEvent.emit(this.AllowShowComment);
+  }
+
+
+
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit, AfterViewChecked, DoCheck } from '@angular/core';
 import { Comment } from 'src/app/models/comment.model';
 
 @Component({
@@ -8,12 +8,23 @@ import { Comment } from 'src/app/models/comment.model';
 })
 export class CommentContainerComponent implements OnInit {
 
+
+
+
   @Input()
   public Comments : Array<Comment> = [];
 
-  constructor() { }
+  @Input()
+  public CanShowComments : boolean;
+
+  constructor() { 
+    console.log(this.CanShowComments)
+    
+  }
 
   ngOnInit() {
+    
   }
+ 
 
 }
