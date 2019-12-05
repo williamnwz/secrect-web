@@ -18,8 +18,8 @@ export class CommentContainerComponent implements OnInit {
   public CanShowComments : boolean;
 
   constructor() { 
-    console.log(this.CanShowComments)
-    
+
+
   }
 
   ngOnInit() {

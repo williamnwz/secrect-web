@@ -36,8 +36,8 @@ export class PostContainerComponent implements OnInit {
     c2.Id = "123111";
     post.Comments.push(c1);
     post.Comments.push(c2);
-    post.Comments.push(c2);
-      
+   
+
     this.Posts.push(post);
     this.Posts.push(post);
     this.Posts.push(post);
