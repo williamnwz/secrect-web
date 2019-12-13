@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule, FormGroup, FormBuilder, Validators } 
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule
 
   ],
   exports : [

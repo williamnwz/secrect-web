@@ -1,6 +1,6 @@
 
 <div class="col-md-4 offset-md-4">
-    <form  class="form-signin">
+    <form [formGroup]="signInForm" class="form-signin">
 
         <div class="row">
             <div class="col-md-12">
@@ -11,13 +11,28 @@
                 
                 <div class="form-label-group">
                     <label for="inputLogin">Login</label>
-                    <input  type="text" id="inputLogin" class="form-control" placeholder="Login" required="" autofocus>
+                    <input  
+                    type="text" 
+                    id="inputLogin"  
+                    formControlName="login" 
+                    class="form-control" 
+                    placeholder="Login" 
+                    required="" 
+                    autofocus>
+
                     <small class="text-danger d-block mt-2">Login is required</small>
                 </div>
                 
                 <div class="form-label-group">
                     <label for="inputPassword">Password</label>
-                    <input   type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+                    <input 
+                    type="password" 
+                    id="inputPassword" 
+                    formControlName="password" 
+                    class="form-control" 
+                    placeholder="Password" 
+                    required="">
+                    
                     <small class="text-danger d-block mt-2">Password is required</small>
                 </div>
             </div>

@@ -11,12 +11,15 @@ export class ItemPostComponent implements OnInit {
 
   @Input()
   public Post : Post;
+  public Color : string;
 
   @Input()
   public CanShowComments : boolean;
 
   constructor() { 
     this.CanShowComments = false;
+    this.Color = "#" +Math.floor(Math.random()*4096).toString(16);
+    console.log( this.Color);
   }
 
   ngOnInit() {
