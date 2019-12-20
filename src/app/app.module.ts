@@ -11,6 +11,7 @@ import { TokenService } from './services/token.service';
 import { UserService } from './services/user.service';
 import { FormsModule } from '@angular/forms';
 import { LoginModule } from './user/login/login.module';
+import { PostService } from './services/post.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LoginModule } from './user/login/login.module';
   providers: [
     AuthService,
     TokenService,
-    UserService
+    UserService,
+    PostService
 ],
   bootstrap: [AppComponent]
 })

@@ -37,7 +37,6 @@ export class AuthService {
       window.localStorage.setItem("alias",res.loginAlias);
       window.localStorage.setItem("color", color);
       window.localStorage.setItem("id", res.id);
-     
     })).toPromise();
 
 

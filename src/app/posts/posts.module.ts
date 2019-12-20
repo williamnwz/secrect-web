@@ -5,6 +5,7 @@ import { ItemPostComponent } from './item-post/item-post.component';
 import { CommentsModule } from './comments/comments.module';
 import { NewPostComponent } from './new-post/new-post.component';
 import { NewPostPopupComponent } from './new-post-popup/new-post-popup.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,7 +17,9 @@ import { NewPostPopupComponent } from './new-post-popup/new-post-popup.component
     ],
   imports: [
     CommonModule,
-    CommentsModule
+    CommentsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports:[
     PostContainerComponent,

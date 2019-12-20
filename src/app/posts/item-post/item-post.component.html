@@ -4,11 +4,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-2">
-                        <canvas id="myCanvas" width="64" height="64" [style.background-color]="Color" style="width: 64px; height: 64px; margin: 0px 5px; border-radius: 5px;"></canvas>
+                        <canvas id="myCanvas" width="64" height="64" [style.background-color]="Post.colorProfileUsed" style="width: 64px; height: 64px; margin: 0px 5px; border-radius: 5px;"></canvas>
                     </div>
                     <div class="col-md-10">
                         <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                        <strong class="d-block text-gray-dark">{{Post.Alias}}</strong>
+                        <strong class="d-block text-gray-dark">{{Post.alias}}</strong>
                         </p>
                     </div>
                 </div>
@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="offset-md-2 col-md-9">
                         <div class="text-muted pt-3">
-                            <h2 class="post-description">{{Post.Description}}</h2>
+                            <h2 class="post-description">{{Post.description}}</h2>
                         </div>
                     </div>
                 </div>
@@ -24,10 +24,10 @@
                 
                 <comment-container 
                     [CanShowComments]="CanShowComments" 
-                    [Comments]="Post.Comments">
+                    [Comments]="Post.comments">
                 </comment-container>
 
-                <actions-comment-container (AllowShowCommentEvent)="ReciveAllowShowComments($event)" [Comments]="Post.Comments"></actions-comment-container>
+                <actions-comment-container (AllowShowCommentEvent)="ReciveAllowShowComments($event)" [Comments]="Post.comments"></actions-comment-container>
 
             </div>
         </div>

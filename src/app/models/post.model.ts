@@ -2,11 +2,12 @@ import { Comment } from './comment.model';
 
 export class Post{
 
-    public Id : string;
-    public Description : string;
-    public Comments: Array<Comment> = [];
-    public Create : Date;
-    public Alias : string;
+    public id : string;
+    public description : string;
+    public comments: Array<Comment> = [];
+    public create : Date;
+    public alias : string;
+    public colorProfileUsed : string;
 
     constructor() {
     }

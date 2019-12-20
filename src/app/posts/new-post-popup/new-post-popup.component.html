@@ -1,23 +1,31 @@
-<div class="modal-header">
-        <h5 class="modal-title">Create your post here! Do not think, do it!</h5>
-        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    
-    <div class="modal-body">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1">What do you want to say for everybody? <i class="fas fa-fire-alt"></i> <i class="fas fa-fire-alt"></i> <i class="fas fa-fire-alt"></i></label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                </div>            
+<form [formGroup]="newPostFrom">
+
+    <div class="modal-header">
+            <h5 class="modal-title">Create your post here! Do not think, do it!</h5>
+            <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        
+        <div class="modal-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">What do you want to say for everybody? <i class="fas fa-fire-alt"></i> <i class="fas fa-fire-alt"></i> <i class="fas fa-fire-alt"></i></label>
+                            <textarea 
+                            formControlName="description" 
+                            class="form-control" 
+                            id="textPost"
+                            rows="5"
+                            required=""></textarea>
+                        </div>
+                    </div>            
+                </div>
             </div>
         </div>
-    </div>
-    
-    <div class="modal-footer">
-        <button type="button" class="btn btn-block btn-outline-success" (click)="save()"><i class="fas fa-poo"></i> Do it! <i class="fas fa-poo"></i></button>
-    </div>
+        
+        <div class="modal-footer">
+            <button type="button" class="btn btn-block btn-outline-success" (click)="save()"><i class="fas fa-poo"></i> Do it! <i class="fas fa-poo"></i></button>
+        </div>
+</form>

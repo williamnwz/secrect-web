@@ -18,4 +18,8 @@ export class TokenService {
   public RemoveToken(): void {
     window.localStorage.removeItem(KEY);
   }
+
+  public GetToken() : string{
+    return  window.localStorage.getItem(KEY);
+  }
 }
