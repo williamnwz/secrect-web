@@ -3,8 +3,7 @@ import { Post } from '../models/post.model';
 import { AuthService } from './auth.service';
 import { UserService } from './user.service';
 import { HttpClient } from '@angular/common/http';
-
-const API_URL = "http://localhost:58187/";
+import { Environment } from '../environment/Environment';
 
 @Injectable()
 export class PostService {
@@ -18,7 +17,7 @@ export class PostService {
   public CreatePost(post : Post)  : any {
     let user = this.authService.GetAliasInfo();
 
-    return this.http.post(API_URL + "v1/posts/new-post", {
+    return this.http.post(Environment.ApiEndpoint + "v1/posts/new-post", {
       Description : post.description,
       Alias : user.Alias,
       ColorProfileUsed: user.Color
@@ -27,8 +26,7 @@ export class PostService {
 
   public ListAllPosts() : any {
     let user = this.authService.GetAliasInfo();
-    return this.http.get(API_URL + "v1/posts/list-posts", this.userService.GetAuth())
-    .toPromise();
+    return this.http.get(Environment.ApiEndpoint + "v1/posts/list-posts", this.userService.GetAuth()).toPromise();
   }
   
 }

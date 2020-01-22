@@ -21,7 +21,6 @@ export class NewPostPopupComponent implements OnInit {
     private userService : UserService) {
   }
 
-
   ngOnInit() {
 
     this.newPostFrom = this.formBuilder.group({
@@ -38,7 +37,10 @@ export class NewPostPopupComponent implements OnInit {
     post.colorProfileUsed = user.Color;
     post.id = user.Id;
 
-    this.postService.CreatePost(post);
+    this.postService.CreatePost(post)
+    .then(()=>{
+      this.activeModal.close(post);
+    });
   }
 
 }

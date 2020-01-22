@@ -16,7 +16,7 @@ export class NewPostComponent implements OnInit {
 
   public newPost() {
     let modalRef = this.modalService.open(NewPostPopupComponent);
-    let comment = new Comment();
+    let postCreated = modalRef.result;
   }
 
 }

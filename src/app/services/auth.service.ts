@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { TokenService } from './token.service';
 import { User } from '../models/user.model';
-const API_URL = "http://localhost:58187";
+import { Environment } from '../environment/Environment';
 
 
 @Injectable()
@@ -23,7 +23,7 @@ export class AuthService {
   }
 
   public Authenticate(login: string, password: string) : any { 
-    return this.http.post(API_URL + "/v1/users/login",
+    return this.http.post(Environment.ApiEndpoint + "v1/users/login",
     {
       Login : login,
       Password : password
